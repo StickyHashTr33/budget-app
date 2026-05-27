@@ -13,7 +13,7 @@ export default function BudgetSummary({ refreshTrigger }) {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/expenses/summary', {
+      const response = await axios.get('https://budget-app-zex9.onrender.com/api/expenses/summary', {
         params: { month, year },
         headers: {
           Authorization: `Bearer ${token}`,

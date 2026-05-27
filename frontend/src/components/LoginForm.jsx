@@ -15,7 +15,7 @@ export default function LoginForm() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://budget-app-zex9.onrender.com/api/auth/login', {
         email,
         password,
       });

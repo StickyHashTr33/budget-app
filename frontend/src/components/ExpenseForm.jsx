@@ -19,7 +19,7 @@ export default function ExpenseForm({ onExpenseAdded }) {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/expenses/add',
+        'https://budget-app-zex9.onrender.com/api/expenses/add',
         {
           amount: parseFloat(amount),
           category,

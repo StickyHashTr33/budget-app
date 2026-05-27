@@ -16,7 +16,7 @@ export default function ExpensesList({ refreshTrigger }) {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/expenses/all', {
+      const response = await axios.get('https://budget-app-zex9.onrender.com/api/expenses/all', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,7 +37,7 @@ export default function ExpensesList({ refreshTrigger }) {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/expenses/${expenseId}`, {
+      await axios.delete(`https://budget-app-zex9.onrender.com/api/expenses/${expenseId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
