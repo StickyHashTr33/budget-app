@@ -7,10 +7,7 @@ export default function BudgetSummary({ refreshTrigger }) {
   const [year, setYear] = useState(new Date().getFullYear());
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    fetchSummary();
-  }, [month, year, refreshTrigger]);
-
+ useEffect(() => {
   const fetchSummary = async () => {
     setLoading(true);
 
@@ -30,6 +27,9 @@ export default function BudgetSummary({ refreshTrigger }) {
       setLoading(false);
     }
   };
+
+  fetchSummary();
+}, [month, year, refreshTrigger]);
 
   const totalSpent = summary.reduce((sum, item) => sum + parseFloat(item.total), 0);
 

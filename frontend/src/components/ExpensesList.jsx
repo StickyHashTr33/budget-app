@@ -98,7 +98,7 @@ export default function ExpensesList({ refreshTrigger }) {
                     </span>
                   </td>
                   <td className="py-3 px-4">{expense.description || '-'}</td>
-                  <td className="text-right py-3 px-4 font-bold">${expense.amount.toFixed(2)}</td>
+                  <td className="text-right py-3 px-4 font-bold">${parseFloat(expense.amount).toFixed(2)}</td>
                   <td className="text-center py-3 px-4">
                     <button
                       onClick={() => deleteExpense(expense.id)}
